@@ -1,13 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'config.dart';
+import 'viewModels/home_page_view_model.dart';
 import 'views/AboutPage/about_page_widget.dart';
 import 'views/HelpPage/help_page_widget.dart';
 import 'views/HomePage/home_page_widget.dart';
 import 'views/KeyPage/key_page_widget.dart';
-
-import 'viewModels/home_page_view_model.dart';
-import 'package:flutter/material.dart';
-
-import 'config.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,15 +20,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: AppConfig().appName,
-        home: MultiProvider(providers: [
-          ChangeNotifierProvider(create: (context) => HomePageViewModel()),
-        ],
+        home: MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (context) => HomePageViewModel()),
+          ],
           child: const NavigationTab(),
-        )
-    );
+        ));
   }
 }
-
 
 class NavigationTab extends StatefulWidget {
   const NavigationTab({Key? key}) : super(key: key);
@@ -45,9 +43,9 @@ class _NavigationTabState extends State<NavigationTab> {
       create: (_) => HomePageViewModel(),
       child: const HomePageWidget(),
     ),
-    const AboutPageWidget(),
-    const KeyPageWidget(),
     const HelpPageWidget(),
+    const KeyPageWidget(),
+    const AboutPageWidget(),
   ];
 
   void onTabTapped(int index) {
@@ -75,16 +73,16 @@ class _NavigationTabState extends State<NavigationTab> {
               label: 'Home',
               backgroundColor: AppConfig().primaryColor),
           BottomNavigationBarItem(
-              icon: const Icon(Icons.support_agent),
-              label: 'About Us',
+              icon: const Icon(Icons.help),
+              label: 'Help',
               backgroundColor: AppConfig().primaryColor),
           BottomNavigationBarItem(
               icon: const Icon(Icons.shopping_cart),
               label: 'Key',
               backgroundColor: AppConfig().primaryColor),
           BottomNavigationBarItem(
-              icon: const Icon(Icons.menu),
-              label: 'Help',
+              icon: const Icon(Icons.details),
+              label: 'About',
               backgroundColor: AppConfig().primaryColor),
         ],
       ),

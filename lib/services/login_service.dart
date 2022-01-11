@@ -7,15 +7,14 @@ class AuthenticateService {
   final HttpService httpService = HttpService();
 
 
-  Future<Map<String, dynamic>> login(String email, String password) async {
+  Future<Map<String, dynamic>> login(String phoneNumber) async {
     try {
       final Map<String, dynamic>  map = <String, dynamic>{
-        'emailid' : email,
-        'password' : password
+        'phonenumber' : phoneNumber,
       };
       final Response<dynamic> response =
       await httpService.requestSource(
-          AppConfig().loginPageHeading + '/login.php', 'POST', data: map);
+          AppConfig().apiUrl + '/login.php', 'POST', data: map);
       return response.data as Map<String,dynamic>;
     } on DioError catch (error) {
       if (error.type == DioErrorType.receiveTimeout ||

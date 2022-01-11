@@ -3,7 +3,9 @@ import 'package:provider/provider.dart';
 
 import '../../config.dart';
 import '../../helpers/enum.dart';
+import '../../main.dart';
 import '../../viewModels/login_page_view_model.dart';
+import '../RegistrationPage/registration_page_widget.dart';
 
 class LoginPageWidget extends StatelessWidget {
   LoginPageWidget({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class LoginPageWidget extends StatelessWidget {
       child: Consumer<LoginPageViewModel>(
         builder: (con, model, _) {
           if (model.loginStatus == LoginStatus.success) {
-            return const SizedBox();
+            return const NavigationTab();
           } else {
             return Scaffold(
               appBar: PreferredSize(
@@ -57,59 +59,15 @@ class LoginPageWidget extends StatelessWidget {
                                         controller: emailController,
                                         textAlign: TextAlign.left,
                                         style: const TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 18),
+                                            color: Colors.black, fontSize: 18),
                                         validator: (value) {
-                                          if (value == null ||
-                                              value.isEmpty) {
+                                          if (value == null || value.isEmpty) {
                                             return 'Empty Fields';
                                           }
                                           return null;
                                         },
                                         decoration: const InputDecoration(
                                             hintText: 'Enter Mobile Number',
-                                            enabledBorder:
-                                                 OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.grey,
-                                                  width: 0.0),
-                                            ),
-                                            focusedBorder:
-                                                OutlineInputBorder(
-                                              borderSide: BorderSide(
-                                                  color: Colors.grey,
-                                                  width: 0.0),
-                                            )),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 15,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          left: 10.0,
-                                          right: 10,
-                                          top: 5.0,
-                                          bottom: 5.0),
-                                      child: TextFormField(
-                                        autofocus: false,
-                                        obscureText: true,
-                                        controller: passwordController,
-                                        style: const TextStyle(
-                                            color: Colors.black, fontSize: 18),
-                                        validator: (password) {
-                                          if (password == null ||
-                                              password.isEmpty) {
-                                            return 'Please enter some text';
-                                          }
-                                          return null;
-                                        },
-                                        decoration: const InputDecoration(
-                                            hintText: 'Enter Password',
-                                            prefixIcon: Icon(
-                                              Icons.lock,
-                                              color: Colors.grey,
-                                            ),
                                             enabledBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                   color: Colors.grey,
@@ -132,8 +90,7 @@ class LoginPageWidget extends StatelessWidget {
                                         onPressed: () {
                                           if (_formKey.currentState!
                                               .validate()) {
-                                            model.login(emailController.text,
-                                                passwordController.text);
+                                            model.login(emailController.text);
                                           }
                                         },
                                         child: const Text('Sign In'),
@@ -151,31 +108,12 @@ class LoginPageWidget extends StatelessWidget {
                                       height: 15,
                                     ),
                                     GestureDetector(
-                                      onTap: () {},
-                                      child: SizedBox(
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.3,
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.05,
-                                          child: const Text(
-                                            'Forget Password',
-                                            textAlign: TextAlign.center,
-                                          )),
-                                    ),
-                                    const SizedBox(
-                                      height: 15,
-                                    ),
-                                    GestureDetector(
                                       onTap: () {
-                                        // Navigator.push(
-                                        //     context,
-                                        //     MaterialPageRoute(
-                                        //         builder: (context) =>
-                                        //             RegisterPageWidget()));
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    RegisterPageWidget()));
                                       },
                                       child: SizedBox(
                                         width:

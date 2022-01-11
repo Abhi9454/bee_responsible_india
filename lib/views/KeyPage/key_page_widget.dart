@@ -67,8 +67,23 @@ class KeyPageWidget extends StatelessWidget {
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0))),
-                  child: const Center(
-                    child: Text('No Bee Toxicity Available.'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const Text('No Bee Toxicity Available.'),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: const Image(
+                            image: AssetImage(
+                              'images/blank.jpg', //header logo image
+                            ),
+                            fit: BoxFit.contain,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -90,17 +105,32 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.width * 0.30,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Text('These pesticides are indicated in this app with the color red and this icon.'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.4,
+                            child: const Text(
+                                'These pesticides are indicated in this app with the color red and this icon.')),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: const Image(
+                            image: AssetImage(
+                              'images/red.jpg', //header logo image
+                            ),
+                            fit: BoxFit.contain,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
@@ -123,23 +153,40 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.width * 0.30,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Text('These pesticides are indicated in this app with the color yellow and this icon.'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: const Text(
+                              'These pesticides are indicated in this app with the color yellow and this icon.'),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: const Image(
+                            image: AssetImage(
+                              'images/yellow.jpg', //header logo image
+                            ),
+                            fit: BoxFit.contain,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
                 const SizedBox(
                   height: 15,
                 ),
+
                 Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.width * 0.22,
@@ -168,10 +215,26 @@ class KeyPageWidget extends StatelessWidget {
                       borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(10.0),
                           bottomRight: Radius.circular(10.0))),
-                  child: const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Text('These pesticides are indicated in this app with the color Green and this icon.'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: const Text(
+                              'These pesticides are indicated in this app with the color green and this icon.'),
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.25,
+                          child: const Image(
+                            image: AssetImage(
+                              'images/green.jpg', //header logo image
+                            ),
+                            fit: BoxFit.contain,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),

@@ -18,14 +18,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: AppConfig().appName,
-        home: MultiProvider(
-          providers: [
-            ChangeNotifierProvider(create: (context) => HomePageViewModel()),
-          ],
-          child: const NavigationTab(),
-        ));
+      debugShowCheckedModeBanner: false,
+      title: AppConfig().appName,
+      home: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (context) => HomePageViewModel()),
+        ],
+        child: const NavigationTab(),
+      ),
+    );
   }
 }
 
@@ -41,7 +42,7 @@ class _NavigationTabState extends State<NavigationTab> {
   final List<Widget> _children = <Widget>[
     ChangeNotifierProvider<HomePageViewModel>(
       create: (_) => HomePageViewModel(),
-      child: const HomePageWidget(),
+      child: HomePageWidget(),
     ),
     const HelpPageWidget(),
     const KeyPageWidget(),

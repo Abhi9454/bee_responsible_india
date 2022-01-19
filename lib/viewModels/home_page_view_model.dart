@@ -57,8 +57,8 @@ class HomePageViewModel extends ChangeNotifier {
     for (int i = 0; i < products.length; i++) {
       if (products[i]
           .chemicalIngredients
-          .toLowerCase()
-          .contains(searchText.toLowerCase())) {
+          .toLowerCase().substring(0,1).contains(searchText.toLowerCase())) {
+        log(products[i].chemicalIngredients.toString());
         searchedProduct.add(products[i]);
       }
     }
@@ -69,6 +69,7 @@ class HomePageViewModel extends ChangeNotifier {
     try {
       _status = Status.loading;
       _setProducts(await _homePageService.fetchChemical());
+      _sharedPreference.setString('askLogin', 'true');
     } on ShowError catch (error) {
       _status = Status.error;
       _setError(error);

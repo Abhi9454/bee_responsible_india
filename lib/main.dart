@@ -1,3 +1,4 @@
+import 'package:beeresponsibleindia/views/LoginPage/login_page_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,8 +8,10 @@ import 'views/AboutPage/about_page_widget.dart';
 import 'views/HelpPage/help_page_widget.dart';
 import 'views/HomePage/home_page_widget.dart';
 import 'views/KeyPage/key_page_widget.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -39,6 +42,7 @@ class NavigationTab extends StatefulWidget {
 
 class _NavigationTabState extends State<NavigationTab> {
   int _currentIndex = 0;
+  late SharedPreferences _sharedPreference;
   final List<Widget> _children = <Widget>[
     ChangeNotifierProvider<HomePageViewModel>(
       create: (_) => HomePageViewModel(),
@@ -48,6 +52,24 @@ class _NavigationTabState extends State<NavigationTab> {
     const KeyPageWidget(),
     const AboutPageWidget(),
   ];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    checkLoginStatus();
+  }
+
+  checkLoginStatus() async {
+    _sharedPreference = await SharedPreferences.getInstance();
+    if(_sharedPreference.containsKey('askLogin')){
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (BuildContext context) => LoginPageWidget()),
+              (Route<dynamic> route) => false
+      );
+    }
+  }
 
   void onTabTapped(int index) {
     setState(() {

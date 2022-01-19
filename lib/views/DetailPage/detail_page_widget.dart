@@ -111,24 +111,6 @@ class DetailsPageWidget extends StatelessWidget {
               ),
               const SizedBox(height: 20,),
               const Text(
-                'Residual Toxicity',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-              ),
-              const SizedBox(height: 10,),
-              Text(chemicalDetails.chemicalToxic,
-                textAlign: TextAlign.left,
-                maxLines: 5,
-                style: const TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 20
-                ),
-              ),
-              const SizedBox(height: 8,),
-              const Divider(
-                color: Colors.black,
-              ),
-              const SizedBox(height: 20,),
-              const Text(
                 'Applicator Warning',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),

@@ -62,7 +62,7 @@ class _NavigationTabState extends State<NavigationTab> {
 
   checkLoginStatus() async {
     _sharedPreference = await SharedPreferences.getInstance();
-    if(_sharedPreference.containsKey('askLogin')){
+    if(_sharedPreference.containsKey('askLogin') && _sharedPreference.getInt('askLogin') == 1){
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (BuildContext context) => LoginPageWidget()),

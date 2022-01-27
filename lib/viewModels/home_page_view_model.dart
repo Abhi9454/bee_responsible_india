@@ -69,7 +69,9 @@ class HomePageViewModel extends ChangeNotifier {
     try {
       _status = Status.loading;
       _setProducts(await _homePageService.fetchChemical());
-      _sharedPreference.setString('askLogin', 'true');
+      if(!_sharedPreference.containsKey('askLogin')){
+        _sharedPreference.setInt('askLogin', 1);
+      }
     } on ShowError catch (error) {
       _status = Status.error;
       _setError(error);

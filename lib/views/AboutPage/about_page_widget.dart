@@ -1,6 +1,5 @@
 import 'dart:developer';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -21,6 +20,20 @@ class AboutPageWidget extends StatelessWidget {
       log('Could not launch $url');
     }
   }
+
+  void _launchUrlEmail() async {
+    final Uri params = Uri(
+      scheme: 'mailto',
+      path: 'louisa.hooven@oreganonstate.edu',
+    );
+    String url = params.toString();
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      log('Could not launch $url');
+    }
+  }
+
 
   Future<void> _launchInWebViewOrVC(String url) async {
     if (!await launch(
@@ -65,6 +78,21 @@ class AboutPageWidget extends StatelessWidget {
                   },
                   child: const Text(
                     'foodprintgreen@gmail.com',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.blueAccent),
+                  ),
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    _launchUrlEmail();
+                  },
+                  child: const Text(
+                    'louisa.hooven@oreganonstate.edu',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,

@@ -24,7 +24,7 @@ class LoginPageViewModel extends ChangeNotifier {
       _loginStatus = LoginStatus.failed;
     }
     else{
-      preferences.setInt('loginStatus', 1);
+      preferences.setInt('askLogin', 0);
       _loginStatus = LoginStatus.success;
     }
     notifyListeners();

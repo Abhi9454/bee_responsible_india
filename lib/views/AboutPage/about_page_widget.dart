@@ -11,7 +11,7 @@ class AboutPageWidget extends StatelessWidget {
   void _launchURL() async {
     final Uri params = Uri(
       scheme: 'mailto',
-      path: 'foodprintgreen@gmail.com',
+      path: 'info@beeresponsibleindia.org',
     );
     String url = params.toString();
     if (await canLaunch(url)) {
@@ -24,7 +24,7 @@ class AboutPageWidget extends StatelessWidget {
   void _launchUrlEmail() async {
     final Uri params = Uri(
       scheme: 'mailto',
-      path: 'louisa.hooven@oreganonstate.edu',
+      path: 'louisa.hooven@oregonstate.edu',
     );
     String url = params.toString();
     if (await canLaunch(url)) {
@@ -77,7 +77,7 @@ class AboutPageWidget extends StatelessWidget {
                     _launchURL();
                   },
                   child: const Text(
-                    'foodprintgreen@gmail.com',
+                    'info@beeresponsibleindia.org',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,

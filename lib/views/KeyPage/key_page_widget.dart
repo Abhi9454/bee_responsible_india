@@ -257,7 +257,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 1.05,
+                  height: MediaQuery.of(context).size.width * 1.2,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -294,7 +294,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 1.05,
+                  height: MediaQuery.of(context).size.width * 1.2,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -336,7 +336,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.width * 0.8,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),

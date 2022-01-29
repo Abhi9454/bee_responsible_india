@@ -57,8 +57,7 @@ class HomePageViewModel extends ChangeNotifier {
     for (int i = 0; i < products.length; i++) {
       if (products[i]
           .chemicalIngredients
-          .toLowerCase().substring(0,1).contains(searchText.toLowerCase())) {
-        log(products[i].chemicalIngredients.toString());
+          .toLowerCase().substring(0,3).contains(searchText.toLowerCase())) {
         searchedProduct.add(products[i]);
       }
     }

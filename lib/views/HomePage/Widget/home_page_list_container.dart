@@ -4,12 +4,14 @@ class HomePageListContainer extends StatelessWidget {
   const HomePageListContainer(
       {required this.colorCode,
       required this.chemicalName,
+        required this.chemicalGroup,
       required this.chemicalDescription,
       Key? key})
       : super(key: key);
 
   final String colorCode;
   final String chemicalName;
+  final String chemicalGroup;
   final String chemicalDescription;
 
   @override
@@ -30,14 +32,25 @@ class HomePageListContainer extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: const TextStyle(
                       color: Colors.black,
-                      fontSize: 14,
+                      fontSize: 15,
                       fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 2,),
+                Text(
+                  chemicalGroup,
+                  maxLines: 5,
+                  textAlign: TextAlign.left,
+                  style: const TextStyle(
+                      color: Colors.black,
+                      fontSize: 13,
+                      fontWeight: FontWeight.normal),
                 ),
               ],
             ),
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.20,
+            height: MediaQuery.of(context).size.width * 0.15,
             child: Image(
               image: AssetImage(
                 colorCode == 'yellow'
@@ -48,7 +61,7 @@ class HomePageListContainer extends StatelessWidget {
                             ? 'images/green.jpg'
                             : 'images/blank.jpg', //header logo image
               ),
-              fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
           ),
         ],

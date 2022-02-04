@@ -50,17 +50,31 @@ class HomePageViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  clearSearch() async{
+    _status = Status.loading;
+    searchedProduct.clear();
+    _status = Status.success;
+    notifyListeners();
+  }
+
   searchItem(String value) {
     log(value);
+    _status = Status.loading;
     searchText = value;
     searchedProduct.clear();
     for (int i = 0; i < products.length; i++) {
       if (products[i]
           .chemicalIngredients
-          .toLowerCase().substring(0,3).contains(searchText.toLowerCase())) {
+          .toLowerCase().contains(searchText.toLowerCase()) || products[i]
+          .chemicalGroup
+          .toLowerCase().contains(searchText.toLowerCase()) || products[i]
+          .chemicalName
+          .toLowerCase().contains(searchText.toLowerCase())) {
         searchedProduct.add(products[i]);
+        log(products[i].chemicalColor.toString());
       }
     }
+    _status = Status.success;
     notifyListeners();
   }
 

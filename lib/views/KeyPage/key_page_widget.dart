@@ -60,7 +60,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.15,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -105,7 +105,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.30,
+                  height: MediaQuery.of(context).size.height * 0.20,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -153,7 +153,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.30,
+                  height: MediaQuery.of(context).size.height * 0.20,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -189,7 +189,7 @@ class KeyPageWidget extends StatelessWidget {
 
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.width * 0.22,
+                  height: MediaQuery.of(context).size.height * 0.12,
                   color: Colors.lightGreenAccent,
                   child: const Center(
                     child: Padding(
@@ -208,7 +208,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.2,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -257,7 +257,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 1.2,
+                  height: MediaQuery.of(context).size.height * 0.6,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -268,7 +268,7 @@ class KeyPageWidget extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Product contains any active ingredient with an acute LD50 of 2 micrograms/bee or less. This product is highly toxic to bees exposed to direct treatment or residues on blooming crops or weeds. When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds. Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain highly toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
-                      maxLines: 40,
+                      maxLines: 25,
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -294,7 +294,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 1.2,
+                  height: MediaQuery.of(context).size.height * 0.6,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),
@@ -305,7 +305,7 @@ class KeyPageWidget extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Product contains any active ingredient with an acute LD50 of 2 micrograms/bee or less. This product is highly toxic to bees exposed to direct treatment or residues on blooming crops or weeds. When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds. Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain highly toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
-                      maxLines: 40,
+                      maxLines: 25,
                       style: TextStyle(
                         fontSize: 15,
                       ),
@@ -317,7 +317,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.width * 0.22,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   color: Colors.lightGreenAccent,
                   child: const Center(
                     child: Padding(
@@ -336,7 +336,7 @@ class KeyPageWidget extends StatelessWidget {
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.98,
-                  height: MediaQuery.of(context).size.width * 0.8,
+                  height: MediaQuery.of(context).size.height * 0.5,
                   padding: const EdgeInsets.all(3.0),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.black26),

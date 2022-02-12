@@ -92,7 +92,7 @@ class AboutPageWidget extends StatelessWidget {
                     _launchUrlEmail();
                   },
                   child: const Text(
-                    'louisa.hooven@oreganonstate.edu',
+                    'louisa.hooven@oregonstate.edu',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,

@@ -322,7 +322,7 @@ class HomePageWidget extends StatelessWidget {
                                                 .searchedProduct[index]
                                                 .chemicalIngredients,
                                             chemicalGroup: homePageModel
-                                                .products[index]
+                                                .searchedProduct[index]
                                                 .chemicalGroup,
                                             chemicalDescription: homePageModel
                                                 .searchedProduct[index]

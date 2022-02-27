@@ -35,6 +35,7 @@ class AboutPageWidget extends StatelessWidget {
   }
 
 
+
   Future<void> _launchInWebViewOrVC(String url) async {
     if (!await launch(
       url,
@@ -269,6 +270,15 @@ class AboutPageWidget extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
                 ),
                 const SizedBox(
+                  height: 2,
+                ),
+                const Text(
+                  'DRPCAU, Pusa, Bihar',
+                  maxLines: 2,
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
+                ),
+                const SizedBox(
                   height: 25,
                 ),
                 const Text(
@@ -283,6 +293,9 @@ class AboutPageWidget extends StatelessWidget {
                   maxLines: 4,
                   textAlign: TextAlign.left,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 25,
                 ),
               ],
             ),

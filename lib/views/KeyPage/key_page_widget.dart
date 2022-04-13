@@ -247,7 +247,7 @@ class KeyPageWidget extends StatelessWidget {
                   color: Colors.redAccent,
                   child: const Center(
                     child: Text(
-                      'Highly Toxic to Bees',
+                      'Highly Toxic',
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 18,
@@ -267,12 +267,13 @@ class KeyPageWidget extends StatelessWidget {
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Product contains any active ingredient with an acute LD50 of 2 micrograms/bee or less. This product is highly toxic to bees exposed to direct treatment or residues on blooming crops or weeds. When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds. Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain highly toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
+                      'Product contains any active ingredient with an acute LD50 of 2 micrograms/bee or less.\n\nThis product is highly toxic to bees exposed to direct treatment or residues on blooming crops or weeds.   When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds.\n\nTap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain highly toxic for hours or days after application.  The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
                       maxLines: 25,
                       style: TextStyle(
-                        fontSize: 15,
+                          fontSize: 16,
+                          color: Colors.black
                       ),
-                    ),
+                    )
                   ),
                 ),
                 const SizedBox(
@@ -284,10 +285,10 @@ class KeyPageWidget extends StatelessWidget {
                   color: Colors.yellow,
                   child: const Center(
                     child: Text(
-                      'Toxic to Bees',
+                      'Toxic',
                       style: TextStyle(
                           color: Colors.black,
-                          fontSize: 18,
+                          fontSize: 15,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
@@ -304,10 +305,10 @@ class KeyPageWidget extends StatelessWidget {
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Product contains any active ingredient with an acute LD50 of 2 micrograms/bee or less. This product is highly toxic to bees exposed to direct treatment or residues on blooming crops or weeds. When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds. Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain highly toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.Tap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain toxic for hours or days after application. The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
+                      'Product contains any active ingredient with an acute LD50 less than 10.9 and greater than 2 micrograms/bee.\n\nThis product is toxic to bees exposed to direct treatment or residues on blooming crops or weeds.   When bees are visiting the proposed treatment area, do not apply this product or allow it to drift to blooming crops or weeds.\n\nTap the + symbol and scroll down to see approximately how long the pesticide remains toxic (extended residual toxicity) if known. Some pesticides may remain toxic for hours or days after application.  The toxicity of these residues can vary with active ingredient concentration, application rate, weather, and other factors.',
                       maxLines: 25,
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                   ),
@@ -346,10 +347,10 @@ class KeyPageWidget extends StatelessWidget {
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Product contains any active ingredient with an acute LD50 greater than or equal to 11 micrograms/bee.This product is considered practically non-toxic to bees exposed to direct treatment or residues on blooming crops or weeds. Residual toxicity is unlikely to be a concern.Additional research may be needed or emerge, and avoiding exposure to bees is still prudent. The majority of risk assessments are based on the response of the Western Honey Bee (Apis mellifera), and native bees and other pollinating insects may be more sensitive.',
+                      'Product contains any active ingredient with an acute LD50 greater than or equal to 11  micrograms/bee.\n\nThis product is considered practically non-toxic to bees exposed to direct treatment or residues on blooming crops or weeds.   Residual toxicity is unlikely to be a concern.\n\nAdditional research may be needed or emerge, and avoiding exposure to bees is still prudent. The majority of risk assessments are based on the response of the Western Honey Bee (Apis mellifera), and native bees and other pollinating insects may be more sensitive.',
                       maxLines: 40,
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 16,
                       ),
                     ),
                   ),

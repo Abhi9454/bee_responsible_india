@@ -247,7 +247,7 @@ class HomePageWidget extends StatelessWidget {
                                             height: 20,
                                           ),
                                           const Text(
-                                            'Residual Toxicity',
+                                            'Residual Toxicity(For Bees)',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),
@@ -450,7 +450,7 @@ class HomePageWidget extends StatelessWidget {
                                             height: 20,
                                           ),
                                           const Text(
-                                            'Residual Toxicity',
+                                            'Residual Toxicity(For Bees)',
                                             style: TextStyle(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 15),

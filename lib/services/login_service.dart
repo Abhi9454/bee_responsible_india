@@ -16,9 +16,9 @@ class AuthenticateService {
       await httpService.requestSource(
           AppConfig().apiUrl + '/login.php', 'POST', data: map);
       return response.data as Map<String,dynamic>;
-    } on DioError catch (error) {
+    } on DioException catch (error) {
       if (error.type == DioErrorType.receiveTimeout ||
-          error.type == DioErrorType.connectTimeout) {
+          error.type == DioErrorType.connectionTimeout) {
         throw ShowError('Server timeout ');
       } else {
         throw ShowError('Something went wrong');

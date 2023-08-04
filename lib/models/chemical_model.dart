@@ -1,5 +1,5 @@
 class ChemicalModel {
-  final String chemicalId;
+  final int chemicalId;
   final String chemicalIngredients;
   final String chemicalSearchTerm;
   final String chemicalName;

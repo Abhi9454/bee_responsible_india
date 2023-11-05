@@ -239,15 +239,6 @@ class AboutPageWidget extends StatelessWidget {
                   height: 2,
                 ),
                 const Text(
-                  'Nina Rudin, Oklahoma State University',
-                  maxLines: 2,
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
-                ),
-                const SizedBox(
-                  height: 2,
-                ),
-                const Text(
                   'With help and contribution from:',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
@@ -273,7 +264,7 @@ class AboutPageWidget extends StatelessWidget {
                   height: 2,
                 ),
                 const Text(
-                  'DRPCAU, Pusa, Bihar',
+                  'Dr. Pradeep K. Chhuneja, PAU, Ludhiana, India',
                   maxLines: 2,
                   textAlign: TextAlign.left,
                   style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),

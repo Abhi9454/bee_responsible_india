@@ -189,13 +189,13 @@ class KeyPageWidget extends StatelessWidget {
 
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.12,
+                  height: MediaQuery.of(context).size.height * 0.16,
                   color: Colors.lightGreenAccent,
                   child: const Center(
                     child: Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Text(
-                        'No Bee Precautionary statement on label',
+                        'Practically Non-Toxic Bee Precautionary statement on label',
                         maxLines: 3,
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -324,7 +324,7 @@ class KeyPageWidget extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Text(
-                        'No Precaution',
+                        'Practically Non-Toxic',
                         maxLines: 3,
                         textAlign: TextAlign.center,
                         style: TextStyle(

@@ -264,7 +264,7 @@ class AboutPageWidget extends StatelessWidget {
                   height: 2,
                 ),
                 const Text(
-                  'Dr. Pradeep K. Chhuneja, PAU, Ludhiana, India',
+                  'Dr. Pradeep K. Chhuneja, Punjab Agricultural University, Ludhiana, India',
                   maxLines: 2,
                   textAlign: TextAlign.left,
                   style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
